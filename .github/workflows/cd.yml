@@ -42,7 +42,7 @@ jobs:
 
       - name: Instalar las librerias en el servidor
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@ec2-54-145-24-19.compute-1.amazonaws.com \
+          ssh -o StrictHostKeyChecking=no ubuntu@ec2-54-145-24-29.compute-1.amazonaws.com \
             "cd /var/www/damianmarengo && npm install"
 
       - name: Reiniciar PM2 correctamente

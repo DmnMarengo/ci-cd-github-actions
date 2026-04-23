@@ -13,4 +13,19 @@ app.get("/not_found", (req, res) =>{
     res.status(404).json({message: "Error not found"});
 })
 
+app.get("/administradores", (req, res) => {
+    res.status(200).json({ message: "Ok", administradores: [
+        {
+            "nombre": "Juan",
+            "apellido": "Suarez",
+            "edad":25
+        },
+        {
+            "nombre": "Maria",
+            "apellido": "Quintana",
+            "edad":25
+        }
+    ]  });
+})
+
 module.exports = app;

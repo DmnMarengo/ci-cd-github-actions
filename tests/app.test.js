@@ -11,5 +11,10 @@ describe("GET /", ()=> {
        it("Esperamos que responda Pagina no encontrada", async() => {
         const res = await request(app).get("/not_found");
         expect(res.statusCode).toBe(404);        
+    }); 
+        it("Total Admins", async() => {
+        const res = await request(app).get("/administradores");
+        expect(res.body.total).toBe(5);        
     });
+    
 });
